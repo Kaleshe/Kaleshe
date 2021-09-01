@@ -1,6 +1,6 @@
 ---
 title: Web Design & Development | Kaleshe
-description: I'm Kaleshe a freelance Web Designer with over 3 years of professional experience, based in South-East London.
+description: I'm Kaleshe a freelance Web Designer & Developer with over 3 years of professional experience building and maintaining websites.
 slug: index
 heading: Digital Designer & Web Developer
 layout:  layouts/default.njk
@@ -9,7 +9,7 @@ layout:  layouts/default.njk
 <section>
     <div class="projects grid">
        {% for project in collections.project %}
-        <a href="{{ project.url }}" class="project" data-aos="fade-up">
+        <a href="{{ project.url }}" class="project" data-aos="fade-up" data-aos-duration="800">
           <div class="{{ project.data.title | slug }}">
              <img src="{%if project.data.coverImage%}{{ project.data.coverImage }}{%else%}../assets/img/placeholder.svg{%endif%}" alt="">
             <h2>{{ project.data.title }}</h2><span class="sub-title">{{project.data.skills}}</span>
@@ -20,6 +20,6 @@ layout:  layouts/default.njk
 </section>
 
 <section class="cta center">
-   <h3>Want to discuss an upcoming project?</h3>
+   <p>Want to discuss an upcoming project?</p>
    <a href="/contact" class="button button__colour">Get in touch</a>
 </section>

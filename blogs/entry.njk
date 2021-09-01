@@ -1,0 +1,12 @@
+---
+layout: layouts/single.njk
+pagination:
+  data: blogposts
+  size: 1
+  alias: blogpost
+permalink: blog/{{ blogpost.slug | slug }}/index.html
+title: Blogpost
+---
+
+{{ blogpost.body | safe }}
+

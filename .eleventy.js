@@ -24,6 +24,8 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+    eleventyConfig.addPassthroughCopy("/backend/public/uploads");
+
     eleventyConfig.addPassthroughCopy("assets");
     return {
         passthroughFileCopy: true

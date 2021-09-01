@@ -1,0 +1,19 @@
+{% include "partials/header.njk" %}
+
+      <div class="container">
+         <a href="/blog">Back to blog</a>
+         <h1>{{ blogpost.title }}</h1>
+         <p class="post-meta">{{ blogpost.date }}</p>
+
+         <img src="/backend/public{{ blogpost.cover }}">
+      </div>
+
+      <main>
+         <div class="container pt-0">
+            <div class="blog-content">
+               {{ content | safe }}
+            </div>
+         </div>
+      </main>
+
+{% include "partials/footer.njk" %}

@@ -17,19 +17,16 @@
 
    <!-- Stylesheets -->
    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-   <!-- Fonts -->
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-   <link rel="stylesheet" href="https://use.typekit.net/ofh2xqy.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
    <!-- Favicon -->
   <link rel="icon" type="image/png" href="/assets/favicon.png">
 
 
-   <title>{{title}}</title>
+   <title>{%if title == 'Blogpost'%} {{ blogpost.title }} {%else%} {{title}} {%endif%}</title>
 </head>
    <body class="page-{%if slug%}{{slug}}{%else%}{{ title | slug }}{%endif%}{%if tags%} {{tags}}{%endif%}">
+     <div class="master-container">
       <header role="banner">
          <div class="container">
             <a href="/" id="logo">
@@ -39,6 +36,7 @@
              <nav id="menu">
                <ul>
                  <li><a href="/">Home</a></li>
+                 <li><a href="/blog">Blog</a></li>
                  <li><a href="/assets/pdf/resume_kaleshe.pdf" target="_blank">CV</a></li>
                  <li><a href="/contact">Contact</a></li>
                </ul>
