@@ -9,12 +9,10 @@ layout:  layouts/default.njk
 <section>
     <div class="projects grid">
        {% for project in collections.project %}
-        <a href="{{ project.url }}" class="project" data-aos="fade-up" data-aos-duration="800">
-          <div class="{{ project.data.title | slug }}">
-             <img src="{%if project.data.coverImage%}{{ project.data.coverImage }}{%else%}../assets/img/placeholder.svg{%endif%}" alt="">
-            <h2>{{ project.data.title }}</h2><span class="sub-title">{{project.data.skills}}</span>
-          </div>
-       </a>
+        <div class="project" data-aos="fade-up" data-aos-duration="800">
+            <img src="{%if project.data.coverImage%}{{ project.data.coverImage }}{%else%}../assets/img/placeholder.svg{%endif%}" alt="">
+            <a href="{{ project.url }}"><h2>{{ project.data.title }}</h2></a><span class="sub-title">{{project.data.skills}}</span>
+       </div>
        {% endfor %}
     </div>
 </section>
