@@ -137,13 +137,13 @@ body.project h1 {
 
 .single-project img, article .image {
    box-shadow:
-   0 5.6px 16.2px rgba(0, 0, 0, 0.02),
-   0 45px 129px rgba(0, 0, 0, 0.04)
+   0 10px 20px rgba(0, 0, 50, 0.05),
+   0 20px 100px rgba(0, 0, 50, 0.05)
  ; 
 }
 
 .projects .project {
-   transition: .2s ease all;
+   transition: .2s ease-in all;
 }  
 
 
@@ -178,7 +178,7 @@ footer .container, .cta {
    font-size: 1.25rem;
    color: var(--black);
    font-family: var(--header-font);
-   margin-bottom: 0;
+   margin-bottom: .5rem;
 }
 
 .kaleshe-icon {
@@ -227,6 +227,7 @@ form .button {
 
 button, .button {
    border: none;
+   border-radius: 5px;
    text-decoration: none;
    display: inline-block;
    padding: 12px 2rem;
@@ -462,6 +463,14 @@ article:hover .image:after {
 
    .index.title .container {
       padding-bottom: 0;
+   }
+
+   .single-project {
+      margin-bottom: 5rem;
+   }
+
+   .single-project .cta {
+      margin-top: 5rem;
    }
 }
 
