@@ -73,7 +73,7 @@ const Card = ({
 
   return (
     <li className="max-w-lg mx-auto text-center relative space-y-3 group">
-      <div className="h-40 md:h-72 w-full rounded-xl overflow-hidden relative after:left-0 after:top-0 after:absolute after:w-full after:h-full after:bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_56.68%,_rgba(0,_0,_0,_0.42)_87.08%,_rgba(0,_0,_0,_0.90)_100%)] group-hover:opacity-80 transition-all">
+      <div className="h-60 md:h-72 w-full rounded-xl overflow-hidden relative after:left-0 after:top-0 after:absolute after:w-full after:h-full after:bg-[linear-gradient(180deg,_rgba(0,_0,_0,_0)_56.68%,_rgba(0,_0,_0,_0.42)_87.08%,_rgba(0,_0,_0,_0.90)_100%)] group-hover:opacity-80 transition-all">
         <GatsbyImage
           height={361}
           width={373}

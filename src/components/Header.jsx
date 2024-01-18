@@ -31,10 +31,10 @@ const Header = () => (
         objectFit="contain"
       />
       <div>
-        <p className="font-bold text-lg leading-1 sm:leading-none">
+        <p className="font-bold text-lg leading-none">
           Kaleshe <span className="hidden md:inline-block">Alleyne-Vassel</span>
         </p>
-        <p className="text-xs md:text-sm font-medium leading-none text-warm-gray-70">
+        <p className="text-sm font-medium text-warm-gray-70">
           Web designer &amp; developer
         </p>
       </div>
