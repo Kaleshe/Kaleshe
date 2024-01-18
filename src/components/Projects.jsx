@@ -112,7 +112,7 @@ const Projects = () => {
   return (
     <ul className="grid gap-x-6 gap-y-10 md:gap-y-16 md:grid-cols-2 lg:grid-cols-3">
       {PROJECTS.map((item) => (
-        <Card images={images} {...item} />
+        <Card key={item.title} images={images} {...item} />
       ))}
     </ul>
   );

@@ -2,12 +2,6 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  siteMetadata: {
-    title: "Kaleshe | Web designer & developer",
-    description:
-      "A frontend developer with over 3 years of professional experience in web development, UI design, and JavaScript frameworks such as React.",
-    siteUrl: "https://www.kaleshe.co.uk",
-  },
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
@@ -16,7 +10,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/icon.svg",
+        icon: "src/images/icon.png",
       },
     },
     {

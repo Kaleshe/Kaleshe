@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 
 const LINKS = Object.freeze([
@@ -23,13 +24,15 @@ const isExternal = (string) => {
 const Header = () => (
   <header className="flex flex-col gap-4 text-center items-center sm:text-left sm:justify-between sm:flex-row">
     <div className="flex flex-col gap-y-3 gap-x-4 sm:items-center sm:flex-row">
-      <StaticImage
-        alt="Kaleshe"
-        width={53}
-        src="../images/kaleshe.png"
-        quality={70}
-        objectFit="contain"
-      />
+      <Link to="/">
+        <StaticImage
+          alt="Kaleshe"
+          width={53}
+          src="../images/kaleshe.png"
+          quality={70}
+          objectFit="contain"
+        />
+      </Link>
       <div>
         <p className="font-bold text-lg leading-5 md:leading-none">
           Kaleshe <span className="hidden md:inline-block">Alleyne-Vassel</span>
@@ -41,7 +44,7 @@ const Header = () => (
     </div>
     <ul className="flex gap-x-4">
       {LINKS.map(({ icon, url, label }) => (
-        <li>
+        <li key={icon}>
           <a
             href={url}
             {...(isExternal(url)

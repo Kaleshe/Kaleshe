@@ -1,5 +1,7 @@
 import React from "react";
 
+import Button from "@components/Button";
+
 const FormControl = ({ children }) => (
   <div className="flex flex-wrap">{children}</div>
 );
@@ -54,11 +56,9 @@ const Form = () => (
           required
         ></textarea>
       </FormControl>
-      <input
-        type="submit"
-        value="Send"
-        className="bg-black text-white font-medium w-full py-2 rounded-full !mt-6 cursor-pointer hover:bg-warm-gray-70 transition-all"
-      />
+      <Button>
+        <input className="w-full" type="submit" value="Send message" />
+      </Button>
       <input type="hidden" name="_next" value="thanks" />
     </form>
   </section>

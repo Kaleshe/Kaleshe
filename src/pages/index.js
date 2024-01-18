@@ -1,31 +1,60 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 
+import PageTemplate from "@components/PageTemplate";
 import Header from "@components/Header";
 import Projects from "@components/Projects";
 import Form from "@components/Form";
 import Footer from "@components/Footer";
-import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
 const IndexPage = () => (
-  <main className="bg-gradient-to-b from-white from-30% via-[#F7F5F2] via-50% to-warm-gray to-60% py-8 md:py-20">
-    <div className="max-w-5xl mx-auto px-3 space-y-16 md:space-y-20">
-      <Header />
-      <Projects />
-      <Form />
-      <Footer />
-    </div>
-  </main>
+  <PageTemplate>
+    <Header />
+    <Projects />
+    <Form />
+    <Footer />
+  </PageTemplate>
 );
 
 export default IndexPage;
 
 export const Head = () => {
-  const { title, description } = useSiteMetadata();
-
   return (
     <>
-      <title>{title}</title>
-      <meta name="description" content={description} />
+      <Helmet title="Kaleshe | Web designer & developer" />
+      <Helmet>
+        <meta
+          name="description"
+          content="A frontend developer with over 3 years of professional experience in web development, UI design, and JavaScript frameworks such as React."
+        />
+        <meta name="twitter:card" content="summary_large_image"></meta>
+        <meta name="twitter:site" contact="@stubbornneko"></meta>
+        <meta name="twitter:creator" content="@stubbornneko"></meta>
+        <meta
+          name="twitter:title"
+          content="Kaleshe | Web designer & developer"
+        ></meta>
+        <meta
+          name="twitter:description"
+          content="A frontend developer with over 3 years of professional experience in web development, UI design, and JavaScript frameworks such as React."
+        ></meta>
+        <meta name="twitter:image" content="../images/open_graph.png"></meta>
+        ​
+        <meta property="og:locale" content="en_GB" />
+        <meta property="og:site_name" content="Kaleshe" />
+        <meta
+          property="og:title"
+          content="Kaleshe | Web designer & developer"
+        ></meta>
+        <meta property="og:url" content="https://www.kaleshe.co.uk"></meta>
+        <meta
+          property="og:description"
+          content="A frontend developer with over 3 years of professional experience in web development, UI design, and JavaScript frameworks such as React."
+        ></meta>
+        <meta property="og:image" content="../images/open_graph.png"></meta>
+        <meta property="og:image:alt" content="Kaleshe"></meta>
+        <meta property="og:type" content="portfolio" />
+      </Helmet>
     </>
   );
 };
