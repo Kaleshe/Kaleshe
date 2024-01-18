@@ -1,6 +1,0 @@
-
-deployment:
-  tasks:
-    - export DEPLOYPATH=/home/kaleshec/public_html/
-    - npm install --quiet
-    - npm run build
