@@ -14,6 +14,10 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=18.0.0"
+  },
   "dependencies": {
     "autoprefixer": "^10.4.17",
     "gatsby": "^5.13.1",
