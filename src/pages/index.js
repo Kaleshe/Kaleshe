@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => {
 
 export default IndexPage;
 
-export const Head = () => <title>Home Page</title>;
+export const Head = () => <title>Kaleshe | Web designer & developer</title>;
 
 export const pageQuery = graphql`
   query imageQuery {

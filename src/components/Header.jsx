@@ -23,14 +23,19 @@ const isExternal = (string) => {
 const Header = () => (
   <header className="flex justify-between items-center">
     <div className="flex gap-x-4">
-      <StaticImage alt="Kaleshe" width={53} src="../images/kaleshe.png" />
+      <StaticImage
+        alt="Kaleshe"
+        width={53}
+        src="../images/kaleshe.png"
+        quality={70}
+      />
       <div>
         <p className="font-bold text-lg">
           Kaleshe <span className="hidden md:inline-block">Alleyne-Vassel</span>
         </p>
-        <h1 className="text-sm font-medium leading-none text-warm-gray-70">
+        <p className="text-sm font-medium leading-none text-warm-gray-70">
           Web designer &amp; developer
-        </h1>
+        </p>
       </div>
     </div>
     <ul className="flex gap-x-4">

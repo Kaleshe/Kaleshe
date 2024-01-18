@@ -36,7 +36,7 @@ const PROJECTS = [
     title: "Glo",
     description: "UX/UI",
     imageURL: "glo.jpg",
-    url: "",
+    url: "https://www.behance.net/gallery/154402065/Glo",
   },
   {
     title: "Episteme",
@@ -98,7 +98,7 @@ const Card = ({
 };
 
 const Projects = ({ data }) => (
-  <ul className="grid gap-x-6 gap-y-16 md:grid-cols-2 md:grid-cols-3">
+  <ul className="grid gap-x-6 gap-y-16 md:grid-cols-2 lg:grid-cols-3">
     {PROJECTS.map((item) => (
       <Card data={data} {...item} />
     ))}

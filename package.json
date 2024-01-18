@@ -20,6 +20,7 @@
     "gatsby-omni-font-loader": "^2.0.2",
     "gatsby-plugin-alias-imports": "^1.0.5",
     "gatsby-plugin-image": "^3.13.0",
+    "gatsby-plugin-manifest": "^5.13.0",
     "gatsby-plugin-postcss": "^6.13.0",
     "gatsby-plugin-sharp": "^5.13.0",
     "gatsby-source-filesystem": "^5.13.0",

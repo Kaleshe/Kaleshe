@@ -12,6 +12,12 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        icon: "src/images/icon.svg",
+      },
+    },
+    {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: { "@components": "src/components" },
