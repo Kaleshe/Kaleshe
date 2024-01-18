@@ -11,7 +11,7 @@ const LINKS = Object.freeze([
   {
     label: "LinkedIn",
     icon: "linkedin",
-    url: "https://linkedin.com/in/kaleshe",
+    url: "https://www.linkedin.com/in/kaleshe/",
   },
   { label: "Dribble", icon: "dribble", url: "https://dribbble.com/kaleshe" },
 ]);
@@ -31,7 +31,7 @@ const Header = () => (
         objectFit="contain"
       />
       <div>
-        <p className="font-bold text-lg leading-none">
+        <p className="font-bold text-lg leading-5 md:leading-none">
           Kaleshe <span className="hidden md:inline-block">Alleyne-Vassel</span>
         </p>
         <p className="text-sm font-medium text-warm-gray-70">

@@ -3,8 +3,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Kaleshe`,
-    siteUrl: `https://www.kaleshe.co.uk`,
+    title: "Kaleshe | Web designer & developer",
+    description:
+      "A frontend developer with over 3 years of professional experience in web development, UI design, and JavaScript frameworks such as React.",
+    siteUrl: "https://www.kaleshe.co.uk",
   },
   plugins: [
     "gatsby-plugin-postcss",

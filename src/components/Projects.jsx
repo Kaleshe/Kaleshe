@@ -1,5 +1,7 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 
 const PROJECTS = [
   {
@@ -58,17 +60,9 @@ const PROJECTS = [
   },
 ];
 
-const Card = ({
-  title,
-  data: {
-    allImageSharp: { edges },
-  },
-  description,
-  imageURL,
-  url,
-}) => {
-  const image = edges.find((edge) => {
-    return edge.node.fluid.src.includes(imageURL);
+const Card = ({ title, images, description, imageURL, url }) => {
+  const image = images.find((image) => {
+    return image.node.fluid.src.includes(imageURL);
   });
 
   return (
@@ -97,12 +91,31 @@ const Card = ({
   );
 };
 
-const Projects = ({ data }) => (
-  <ul className="grid gap-x-6 gap-y-10 md:gap-y-16 md:grid-cols-2 lg:grid-cols-3">
-    {PROJECTS.map((item) => (
-      <Card data={data} {...item} />
-    ))}
-  </ul>
-);
+const Projects = () => {
+  const {
+    allImageSharp: { edges: images },
+  } = useStaticQuery(graphql`
+    query imageQuery {
+      allImageSharp {
+        edges {
+          node {
+            gatsbyImageData
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <ul className="grid gap-x-6 gap-y-10 md:gap-y-16 md:grid-cols-2 lg:grid-cols-3">
+      {PROJECTS.map((item) => (
+        <Card images={images} {...item} />
+      ))}
+    </ul>
+  );
+};
 
 export default Projects;
