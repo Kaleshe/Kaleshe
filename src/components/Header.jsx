@@ -21,19 +21,20 @@ const isExternal = (string) => {
 };
 
 const Header = () => (
-  <header className="flex justify-between items-center">
-    <div className="flex gap-x-4">
+  <header className="flex flex-col gap-4 text-center items-center sm:text-left sm:justify-between sm:flex-row">
+    <div className="flex flex-col gap-y-3 gap-x-4 sm:items-center sm:flex-row">
       <StaticImage
         alt="Kaleshe"
         width={53}
         src="../images/kaleshe.png"
         quality={70}
+        objectFit="contain"
       />
       <div>
-        <p className="font-bold text-lg">
+        <p className="font-bold text-lg leading-1 sm:leading-none">
           Kaleshe <span className="hidden md:inline-block">Alleyne-Vassel</span>
         </p>
-        <p className="text-sm font-medium leading-none text-warm-gray-70">
+        <p className="text-xs md:text-sm font-medium leading-none text-warm-gray-70">
           Web designer &amp; developer
         </p>
       </div>

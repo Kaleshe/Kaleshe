@@ -27,7 +27,7 @@ const Form = () => (
           Name
         </label>
         <input
-          className="border border-[#D9D9D9] rounded basis-full py-1.5 px-2"
+          className="border w-full border-[#D9D9D9] rounded basis-full py-1.5 px-2"
           type="text"
           name="name"
           required
@@ -38,7 +38,7 @@ const Form = () => (
           Email
         </label>
         <input
-          className="border border-[#D9D9D9] rounded basis-full py-1.5 px-2"
+          className="border w-full border-[#D9D9D9] rounded basis-full py-1.5 px-2"
           type="email"
           name="_replyto"
           required
@@ -49,7 +49,7 @@ const Form = () => (
           Message
         </label>
         <textarea
-          className="border border-[#D9D9D9] rounded basis-full py-1.5 px-2"
+          className="border w-full border-[#D9D9D9] rounded basis-full py-1.5 px-2"
           name="message"
           required
         ></textarea>
