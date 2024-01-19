@@ -6,7 +6,7 @@ const LINKS = Object.freeze([
   {
     label: "Contact",
     icon: "envelope",
-    url: "#contact",
+    url: "/#contact",
   },
   { label: "GitHub", icon: "github", url: "https://github.com/Kaleshe" },
   {
@@ -43,25 +43,28 @@ const Header = () => (
       </div>
     </div>
     <ul className="flex gap-x-4">
-      {LINKS.map(({ icon, url, label }) => (
-        <li key={icon}>
-          <a
-            href={url}
-            {...(isExternal(url)
-              ? { target: "_blank", rel: "noopener noreferrer" }
-              : {})}
-          >
-            <svg
-              height={16}
-              width={16}
-              className="hover:opacity-70 transition-opacity"
-              alt={label}
+      {LINKS.map(({ icon, url, label }) => {
+        const Element = isExternal ? "a" : "Link";
+        return (
+          <li key={icon}>
+            <Element
+              href={url}
+              {...(isExternal(url)
+                ? { target: "_blank", rel: "noopener noreferrer" }
+                : {})}
             >
-              <use href={`/icons.svg#${icon}`}></use>
-            </svg>
-          </a>
-        </li>
-      ))}
+              <svg
+                height={16}
+                width={16}
+                className="hover:opacity-70 transition-opacity"
+                alt={label}
+              >
+                <use href={`/icons.svg#${icon}`}></use>
+              </svg>
+            </Element>
+          </li>
+        );
+      })}
     </ul>
   </header>
 );

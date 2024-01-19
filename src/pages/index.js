@@ -21,8 +21,8 @@ export default IndexPage;
 export const Head = () => {
   return (
     <>
-      <Helmet title="Kaleshe | Web designer & developer" />
       <Helmet>
+        <title>Kaleshe | Web designer & developer</title>
         <meta
           name="description"
           content="A frontend developer with over 3 years of professional experience in web development, UI design, and JavaScript frameworks such as React."
