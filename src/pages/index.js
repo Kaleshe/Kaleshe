@@ -38,7 +38,7 @@ export const Head = () => {
           name="twitter:description"
           content="A frontend developer with over 3 years of professional experience in web development, UI design, and JavaScript frameworks such as React."
         ></meta>
-        <meta name="twitter:image" content="../images/open_graph.png"></meta>
+        <meta name="twitter:image" content="../images/og_image.png"></meta>
         ​
         <meta property="og:locale" content="en_GB" />
         <meta property="og:site_name" content="Kaleshe" />

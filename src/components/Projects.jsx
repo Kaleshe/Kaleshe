@@ -2,6 +2,7 @@ import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
 import { useStaticQuery } from "gatsby";
 import { graphql } from "gatsby";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 const PROJECTS = [
   {
@@ -77,14 +78,14 @@ const Card = ({ title, images, description, imageURL, url }) => {
         />
       </div>
       <div>
-        <a
+        <OutboundLink
           className="font-extrabold text-2xl after:absolute after:left-0 after:top-0 after:w-full after:h-full"
           href={url}
           target="_blank"
           rel="noopener noreferrer"
         >
           {title}
-        </a>
+        </OutboundLink>
         <p className="text-warm-gray-70 font-medium">{description}</p>
       </div>
     </li>

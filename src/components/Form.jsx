@@ -25,7 +25,7 @@ const Form = () => (
       className="space-y-4 basis-full md:basis-5/12 md:py-28"
     >
       <FormControl>
-        <label className="text-sm mb-2" htmlFor="name">
+        <label className="text-sm   mb-2" htmlFor="name">
           Name
         </label>
         <input

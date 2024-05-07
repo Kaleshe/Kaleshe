@@ -2,7 +2,27 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
+  siteMetadata: {
+    title: "Kaleshe | Web designer & developer",
+    description:
+      "A frontend developer with over 3 years of professional experience in web development, UI design, and JavaScript frameworks such as React.",
+    siteUrl: "https://www.kaleshe.co.uk",
+    og: {
+      siteName: "Kaleshe | Web designer & developer",
+      twitterCreator: "@stubbornneko",
+    },
+  },
+
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-KMFWD06BSND"],
+        pluginConfig: {
+          head: false,
+        },
+      },
+    },
     "gatsby-plugin-postcss",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
